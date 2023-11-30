@@ -4,6 +4,6 @@ if __name__ == "__main__":
     a = 10
     b = 5
     print("{} + {} = {}".format(a, b, ee.add(a, b)))
-    print("{} + {} = {}".format(a, b, ee.sub(a, b)))
-    print("{} + {} = {}".format(a, b, ee.mul(a, b)))
-    print("{} + {} = {}".format(a, b, ee.div(a, b)))
+    print("{} - {} = {}".format(a, b, ee.sub(a, b)))
+    print("{} * {} = {}".format(a, b, ee.mul(a, b)))
+    print("{} / {} = {}".format(a, b, ee.div(a, b)))
