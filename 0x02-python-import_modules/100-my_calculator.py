@@ -11,13 +11,13 @@ if __name__ == "__main__":
     ober = sys.argv[2]
     b = int(sys.argv[3])
     if ober == "+":
-        print("{} {} {} = {}".format(a, ober, b, a + b))
+        print("{} {} {} = {}".format(a, ober, b, calc.add(a, b)))
     elif ober == "-":
-        print("{} {} {} = {}".format(a, ober, b, a - b))
+        print("{} {} {} = {}".format(a, ober, b, calc.sub(a, b)))
     elif ober == "*":
-        print("{} {} {} = {}".format(a, ober, b, a * b))
+        print("{} {} {} = {}".format(a, ober, b, calc.mul(a, b)))
     elif ober == "/":
-        print("{} {} {} = {}".format(a, ober, b, a / b))
+        print("{} {} {} = {}".format(a, ober, b, calc.div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
