@@ -2,7 +2,7 @@
 if __name__ == "__main__":
     import sys
     argv = sys.argv
-    arg = len(argv) - 1
+    ad = 0
     for i in range(1, len(argv)):
-        sum += int(argv[i])
-        print(f"{sum}")
+        ad += int(argv[i])
+        print(f"{ad}")
