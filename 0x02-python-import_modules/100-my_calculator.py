@@ -4,7 +4,7 @@ if __name__ == "__main__":
     import calculator_1 as calc
 
     arg = len(sys.argv)
-    if arg != 3:
+    if arg != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
     a = int(sys.argv[1])
