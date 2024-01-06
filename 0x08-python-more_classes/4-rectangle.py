@@ -60,7 +60,7 @@ class Rectangle:
             if i != self.__height - 1:
                 myList.append("\n")
         return "".join(myList)
-    
+
     def __repr__(self):
         """Return the string representation of the Rectangle."""
         rect = "Rectangle(" + str(self.__width)
