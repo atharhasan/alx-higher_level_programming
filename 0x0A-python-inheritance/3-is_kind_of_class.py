@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''2-is_same_class.py'''
+'''3-is_kind_of_class.py'''
 
 
 def is_kind_of_class(obj, a_class):
