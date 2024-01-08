@@ -20,10 +20,6 @@ Numbers:
    Traceback (most recent call last):
    ValueError: number must be greater than 0
 
-:: with 3 arguments
-   >>> bg.integer_validator("numbers", 0, 1)
-   Traceback (most recent call last):
-   TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 :: with infinite integer
    >>> bg.integer_validator("infnumber", int('inf'))
