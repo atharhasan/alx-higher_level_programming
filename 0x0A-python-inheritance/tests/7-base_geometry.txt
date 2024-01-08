@@ -1,27 +1,47 @@
-============================================
-How to use 7-base_geometry.py
-============================================
+The ``7-base_geometry`` module
+=============================
 
-This library is very simple, since it only has one function called
- ''integer_validator()''.
+Using ``BaseGeometry``
+---------------------
 
-Numbers:
-========
-''integer_validator()'' returns True if a num is integer.
-:: with positives integers
-   >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-   >>> bg = BaseGeometry()
+Import the class:
 
-:: with positive integer
-   >>> bg.integer_validator("my_int", 12)
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-:: with negative integer
-   >>> bg.integer_validator("number", -12)
-   Traceback (most recent call last):
-   ValueError: number must be greater than 0
+Now test it:
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("my_int", "22")
+    Traceback (most recent call last):
+    TypeError: my_int must be an integer
+
+    >>> bg.integer_validator("", 22)
+
+    >>> bg.integer_validator("", "22")
+    Traceback (most recent call last):
+    TypeError:  must be an integer
+
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> bg.integer_validator("my_int", 0)
+    Traceback (most recent call last):
+    ValueError: my_int must be greater than 0
+
+    >>> bg.integer_validator("list", [0, 1, 2])
+    Traceback (most recent call last):
+    TypeError: list must be an integer
 
 
-:: with infinite integer
-   >>> bg.integer_validator("infnumber", int('inf'))
-   Traceback (most recent call last):
-   ValueError: invalid literal for int() with base 10: 'inf'
+    >>> bg.integer_validator("my_int", {2, 1})
+    Traceback (most recent call last):
+    TypeError: my_int must be an integer
+
+    >>> bg.integer_validator("my_int", None)
+    Traceback (most recent call last):
+    TypeError: my_int must be an integer
+
+    >>> bg.integer_validator("my_int", (2,))
+    Traceback (most recent call last):
+    TypeError: my_int must be an integer
