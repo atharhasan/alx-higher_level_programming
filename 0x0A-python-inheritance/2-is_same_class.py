@@ -9,6 +9,4 @@ def is_same_class(obj, a_class):
     obj: the first arg that we want to check
     a_class: the second arg that we want to compare with
     """
-    if isinstance(obj, a_class):
-        return True
-    return False
+    return type(obj) == a_class
