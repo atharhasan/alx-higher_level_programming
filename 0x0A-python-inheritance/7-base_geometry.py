@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''6-base_geometry.py'''
+'''7-base_geometry.py'''
 
 
 class BaseGeometry:
