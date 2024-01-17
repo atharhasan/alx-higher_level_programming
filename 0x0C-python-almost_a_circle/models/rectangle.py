@@ -14,15 +14,6 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def __str__(self):
-        """ str special method"""
-        str_rec = "[Rectangle] "
-        str_id = "({}) ".format(self.id)
-        str_xy = "{}/{} - ".format(self.__x, self.__y)
-        str_wh = "{}/{}".format(self.__width, self.__height)
-
-        return str_rec + str_id + str_xy + str_wh
-
     @property
     def width(self):
         """width getter"""
@@ -88,3 +79,12 @@ class Rectangle(Base):
         with the character #"""
         for i in range(self.height):
             print("#" * self.width, end="\n")
+
+    def __str__(self):
+        """ str special method"""
+        str_rec = "[Rectangle] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_wh = "{}/{}".format(self.width, self.height)
+
+        return str_rec + str_id + str_xy + str_wh
