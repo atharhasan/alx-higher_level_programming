@@ -90,3 +90,9 @@ class Rectangle(Base):
         str_wh = "{}/{}".format(self.width, self.height)
 
         return str_rec + str_id + str_xy + str_wh
+
+    def update(self, *args):
+        """that assigns an argument to each attribute"""
+        list_args = ["id", "width", "height", "x", "y"]
+        for i in range(len(args)):
+            setattr(self, list_args[i], args[i])
