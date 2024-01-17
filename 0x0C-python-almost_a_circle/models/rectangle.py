@@ -18,8 +18,8 @@ class Rectangle(Base):
         """ str special method"""
         str_rec = "[Rectangle] "
         str_id = "({}) ".format(self.id)
-        str_xy = "{}/{} - ".format(self.x, self.y)
-        str_wh = "{}/{} ".format(self.width, self.height)
+        str_xy = "{}/{} - ".format(self.__x, self.__y)
+        str_wh = "{}/{} ".format(self.__width, self.__height)
 
         return str_rec + str_id + str_xy + str_wh
 
