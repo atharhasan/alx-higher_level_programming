@@ -91,8 +91,12 @@ class Rectangle(Base):
 
         return str_rec + str_id + str_xy + str_wh
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """that assigns an argument to each attribute"""
-        list_args = ["id", "width", "height", "x", "y"]
-        for i in range(len(args)):
-            setattr(self, list_args[i], args[i])
+        if args is not None and len(args) is not 0:
+            list_args = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, list_args[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
