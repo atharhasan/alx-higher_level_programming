@@ -19,7 +19,7 @@ class Rectangle(Base):
         str_rec = "[Rectangle] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.__x, self.__y)
-        str_wh = "{}/{} ".format(self.__width, self.__height)
+        str_wh = "{}/{}".format(self.__width, self.__height)
 
         return str_rec + str_id + str_xy + str_wh
 
