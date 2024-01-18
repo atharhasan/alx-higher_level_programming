@@ -64,14 +64,14 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """that returns a list of instances"""
+        """ Returns a list of instances """
         filename = "{}.json".format(cls.__name__)
 
         if os.path.exists(filename) is False:
             return []
 
-        with open(filename, "r") as file:
-            list_str = file.read
+        with open(filename, 'r') as f:
+            list_str = f.read()
 
         list_cls = cls.from_json_string(list_str)
         list_ins = []
@@ -80,6 +80,7 @@ class Base:
             list_ins.append(cls.create(**list_cls[index]))
 
         return list_ins
+
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
