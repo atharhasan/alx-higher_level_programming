@@ -81,7 +81,6 @@ class Base:
 
         return list_ins
 
-
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """ Method that saves a CSV file """
