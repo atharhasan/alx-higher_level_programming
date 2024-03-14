@@ -1,7 +1,5 @@
 #!/usr/bin/node
-/* script that prints a message depending 
-of the number of arguments passed 
-*/
+// prints a message depending of the number of arguments 
 
 if (process.argv.length === 2) {
 	console.log('No argument');
