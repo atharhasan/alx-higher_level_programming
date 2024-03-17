@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-''' a script that lists all State objects
+""" a script that lists all State objects
 and corresponding City objects
-contained in the database hbtn_0e_101_usa '''
+contained in the database hbtn_0e_101_usa """
 
 
 import sys
@@ -16,9 +16,11 @@ if __name__ == "__main__":
     password = sys.argv[2]
     dbname = sys.argv[3]
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-                           username, password, dbname),
-                           pool_pre_ping=True)
+    engine = create_engine(
+        "mysql+mysqldb://{}:{}@localhost:3306/{}"
+        .format(username, password, dbname),
+        pool_pre_ping=True,
+    )
 
     Base.metadata.create_all(engine)
     session = Session(bind=engine)
