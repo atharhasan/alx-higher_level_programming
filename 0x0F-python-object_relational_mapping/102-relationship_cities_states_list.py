@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-""" a script that lists all State objects
-and corresponding City objects
-contained in the database hbtn_0e_101_usa """
+''' a script that lists all City objects from the database hbtn_0e_101_usa '''
 
 
 import sys
@@ -16,19 +14,14 @@ if __name__ == "__main__":
     password = sys.argv[2]
     dbname = sys.argv[3]
 
-    engine = create_engine(
-        "mysql+mysqldb://{}:{}@localhost:3306/{}"
-        .format(username, password, dbname),
-        pool_pre_ping=True,
-    )
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+                           username, password, dbname),
+                           pool_pre_ping=True)
 
-    Base.metadata.create_all(engine)
     session = Session(bind=engine)
-    query = session.query(State).order_by(State.id).all()
+    query = session.query(City).order_by(City.id).all()
 
-    for st in query:
-        print("{}: {}".format(st.id, st.name))
-        for cit in st.cities:
-            print("\t{}: {}".format(cit.id, cit.name))
+    for city in query:
+        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
 
     session.close()
