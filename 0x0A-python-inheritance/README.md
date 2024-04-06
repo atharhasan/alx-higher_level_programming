@@ -1,1 +1,1 @@
-This is Readme file for inheritance
+This is Readme file for inheritance.
